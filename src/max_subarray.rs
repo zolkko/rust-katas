@@ -51,7 +51,7 @@ fn simple_search(array: &[i32]) -> i32 {
 ///
 /// We can rewrite `if sum < acc {}` statement as `sum = max(sum, acc)`
 ///
-/// And by going further and taking dynamic approach and considering `array[a] -> 'a` and
+/// Further, by taking a dynamic programming approach and considering `array[a] -> 'a` and
 /// `array[a,b] -> max(b, array[a] + b)` we will ends up with Kanade's algorithm.
 fn kadane(array: &[i32]) -> i32 {
     if array.len() == 0 {
