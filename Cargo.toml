@@ -1,0 +1,18 @@
+[package]
+name = "rust-katas"
+version = "0.1.0"
+authors = ["zolkko <zolkko@gmail.com>"]
+
+[[bin]]
+name = "max_subarray"
+path = "src/max_subarray.rs"
+
+[[bin]]
+name = "read_ints"
+path = "src/read_ints.rs"
+
+[dependencies]
+
+[dev-dependencies]
+
+[build-dependencies]
