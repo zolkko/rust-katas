@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+message Test {
+    int32 id = 1;
+    string name = 2;
+    enum VarType {
+        CONT = 0;
+        DISC = 1;
+    }
+    VarType typ = 3;
+    oneof TestOneof {
+        string yoyo = 4;
+        int32 sub_message = 5;
+    }
+}

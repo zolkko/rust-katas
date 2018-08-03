@@ -11,7 +11,18 @@ path = "src/max_subarray.rs"
 name = "read_ints"
 path = "src/read_ints.rs"
 
+[[bin]]
+name = "merge_arrays"
+path = "src/merge_arrays.rs"
+
+[[bin]]
+name = "print_exec"
+path = "src/print_exec"
+
 [dependencies]
+
+[target.'cfg(target_os="macos")'.dependencies]
+core-foundation = "0.6.1"
 
 [dev-dependencies]
 
