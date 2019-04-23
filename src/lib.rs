@@ -1,4 +1,7 @@
 
+mod quick_sort;
+
+
 type VariableId = usize;
 
 type Float = f64;

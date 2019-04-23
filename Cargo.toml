@@ -3,6 +3,10 @@ name = "rust-katas"
 version = "0.1.0"
 authors = ["zolkko <zolkko@gmail.com>"]
 
+[lib]
+name ="rust_katas"
+path = "src/lib.rs"
+
 [[bin]]
 name = "max_subarray"
 path = "src/max_subarray.rs"
@@ -17,7 +21,7 @@ path = "src/merge_arrays.rs"
 
 [[bin]]
 name = "print_exec"
-path = "src/print_exec"
+path = "src/print_exec.rs"
 
 [dependencies]
 
