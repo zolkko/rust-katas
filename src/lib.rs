@@ -1,5 +1,6 @@
 
 mod quick_sort;
+mod insertion_sort;
 
 
 type VariableId = usize;
