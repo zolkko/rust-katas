@@ -2,6 +2,7 @@
 name = "rust-katas"
 version = "0.1.0"
 authors = ["zolkko <zolkko@gmail.com>"]
+edition = "2018"
 
 [lib]
 name ="rust_katas"
@@ -23,7 +24,13 @@ path = "src/merge_arrays.rs"
 name = "print_exec"
 path = "src/print_exec.rs"
 
+[[bin]]
+name = "async_book"
+path = "src/async_book.rs"
+
 [dependencies]
+ndarray = { version = "^0.12" }
+futures-preview = { version = "=0.3.0-alpha.18", features = ["compat"] }
 
 [target.'cfg(target_os="macos")'.dependencies]
 core-foundation = "0.6.1"
