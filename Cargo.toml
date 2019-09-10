@@ -30,7 +30,7 @@ path = "src/async_book.rs"
 
 [dependencies]
 ndarray = { version = "^0.12" }
-futures-preview = { version = "=0.3.0-alpha.18", features = ["compat"] }
+futures-preview = { version = "=0.3.0-alpha.18", features = ["compat", "async-await", "nightly"] }
 
 [target.'cfg(target_os="macos")'.dependencies]
 core-foundation = "0.6.1"
