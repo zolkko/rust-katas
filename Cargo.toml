@@ -28,6 +28,10 @@ path = "src/print_exec.rs"
 name = "async_book"
 path = "src/async_book.rs"
 
+[[bin]]
+name = "sum2020"
+path = "src/sum2020.rs"
+
 [dependencies]
 ndarray = { version = "^0.12" }
 futures-preview = { version = "=0.3.0-alpha.18", features = ["compat", "async-await", "nightly"] }
