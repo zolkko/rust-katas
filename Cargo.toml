@@ -32,6 +32,10 @@ path = "src/async_book.rs"
 name = "sum2020"
 path = "src/sum2020.rs"
 
+[[bin]]
+name = "valid_pass"
+path = "src/valid_pass.rs"
+
 [dependencies]
 ndarray = { version = "^0.12" }
 futures-preview = { version = "=0.3.0-alpha.18", features = ["compat", "async-await", "nightly"] }
