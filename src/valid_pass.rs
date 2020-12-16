@@ -46,6 +46,18 @@ fn parse_input<'a>(input: &'a str) -> Result<Input<'a>, Box<dyn Error>> {
     }
 }
 
+fn validate_input(input: Input<'_>) -> bool {
+    let mut count = 0;
+    for c in input.password.chars() {
+        if c == input.letter {
+            count += 1;
+        }
+        if count > input.range.end {
+            return false;
+        }
+    }
+    count >= input.range.start
+}
 
 fn main() {
     let inputs = vec![
@@ -56,7 +68,14 @@ fn main() {
 
     for i in inputs {
         match parse_input(i) {
-            Ok(x) => println!("PARSED: {:?}", x),
+            Ok(x) => {
+                print!("PARSED: {:?}", x);
+                if validate_input(x) {
+                    println!("\tis valid");
+                } else {
+                    println!("\tis not valid");
+                }
+            },
             Err(err) => println!("ERROR: {:?}", err),
         }
     }
