@@ -60,6 +60,7 @@ fn validate_input(input: Input<'_>) -> bool {
 }
 
 fn main() {
+    /*
     let inputs = vec![
         "1-3 a: abcde",
         "1-3 b: cdefg",
@@ -78,5 +79,25 @@ fn main() {
             },
             Err(err) => println!("ERROR: {:?}", err),
         }
+    }*/
+}
+
+#[cfg(test)]
+mod tests {
+
+    use super::*;
+
+    #[test]
+    fn test_inputs() {
+        let inputs = vec![
+            ("1-3 a: abcde", true),
+            ("1-3 b: cdefg", false),
+            ("2-9 c: ccccccccc", true),
+        ];
+
+        for (i, r) in inputs {
+            assert_eq!(parse_input(i).map(validate_input).unwrap(), r);
+        }
     }
+
 }
