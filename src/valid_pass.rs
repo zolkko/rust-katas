@@ -59,27 +59,22 @@ fn validate_input(input: Input<'_>) -> bool {
     count >= input.range.start
 }
 
-fn main() {
-    /*
-    let inputs = vec![
-        "1-3 a: abcde",
-        "1-3 b: cdefg",
-        "2-9 c: ccccccccc",
-    ];
-
-    for i in inputs {
-        match parse_input(i) {
-            Ok(x) => {
-                print!("PARSED: {:?}", x);
-                if validate_input(x) {
-                    println!("\tis valid");
-                } else {
-                    println!("\tis not valid");
-                }
-            },
-            Err(err) => println!("ERROR: {:?}", err),
+fn main() -> Result<(), Box<dyn Error>> {
+    let mut valid_lines = 0;
+    let mut line = String::with_capacity(10);
+    while let Ok(_) = std::io::stdin().read_line(&mut line) {
+        let trimmed_line = line.trim();
+        if trimmed_line.is_empty() {
+            break;
         }
-    }*/
+        let parsed_input = parse_input(&trimmed_line)?;
+        if validate_input(parsed_input) {
+            valid_lines += 1;
+        }
+        line.truncate(0);
+    }
+    println!("{}", valid_lines);
+    Ok(())
 }
 
 #[cfg(test)]
