@@ -7,10 +7,10 @@
 
 fn insertion_sort<T: Ord>(array: &mut [T]) {
     for i in 1..array.len() {
-
+        // the index variable cannot be less than zero, because i starts with one and thus subtraction is always the valid operation here.
         let mut index = i - 1;
 
-        while index >= 0 && array[index] > array[index + 1] {
+        while array[index] > array[index + 1] {
             array.swap(index, index + 1);
 
             if index != 0 {
