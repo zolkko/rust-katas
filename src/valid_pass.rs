@@ -62,7 +62,7 @@ fn validate_input(input: Input<'_>) -> bool {
 fn main() -> Result<(), Box<dyn Error>> {
     let mut valid_lines = 0;
     let mut line = String::with_capacity(10);
-    while let Ok(_) = std::io::stdin().read_line(&mut line) {
+    while std::io::stdin().read_line(&mut line).is_ok() {
         let trimmed_line = line.trim();
         if trimmed_line.is_empty() {
             break;
