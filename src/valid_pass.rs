@@ -1,4 +1,4 @@
-#![feature(str_split_once)]
+///! `#![feature(str_split_once)]` is not longer the gated feature.
 use std::error::Error;
 
 
@@ -81,6 +81,7 @@ fn main() -> Result<(), Box<dyn Error>> {
 mod tests {
 
     use super::*;
+
 
     #[test]
     fn test_inputs() {

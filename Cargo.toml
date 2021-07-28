@@ -17,14 +17,6 @@ name = "read_ints"
 path = "src/read_ints.rs"
 
 [[bin]]
-name = "merge_arrays"
-path = "src/merge_arrays.rs"
-
-[[bin]]
-name = "print_exec"
-path = "src/print_exec.rs"
-
-[[bin]]
 name = "async_book"
 path = "src/async_book.rs"
 
@@ -36,12 +28,17 @@ path = "src/sum2020.rs"
 name = "valid_pass"
 path = "src/valid_pass.rs"
 
-[dependencies]
-ndarray = { version = "^0.12" }
-futures-preview = { version = "=0.3.0-alpha.18", features = ["compat", "async-await", "nightly"] }
+[[bin]]
+name = "poll_fn_stream"
+path = "src/poll_fn_stream.rs"
 
-[target.'cfg(target_os="macos")'.dependencies]
-core-foundation = "0.6.1"
+[dependencies]
+ndarray = { version = "0.15" }
+
+futures = "0.3"
+tracing = "0.1"
+tokio = { version = "1", features = ["full"] }
+tokio-util = { version = "0.6", features = ["io"] }
 
 [dev-dependencies]
 
