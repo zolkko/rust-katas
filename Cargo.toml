@@ -9,6 +9,10 @@ name ="rust_katas"
 path = "src/lib.rs"
 
 [[bin]]
+name = "two_sum"
+path = "src/two_sum.rs"
+
+[[bin]]
 name = "max_subarray"
 path = "src/max_subarray.rs"
 
@@ -36,6 +40,10 @@ path = "src/poll_fn_stream.rs"
 name = "watch_file"
 path = "src/watch_file.rs"
 
+[[bin]]
+name = "iwatch_file"
+path = "src/iwatch_file.rs"
+
 [dependencies]
 ndarray = { version = "0.15" }
 
@@ -44,6 +52,8 @@ tracing = "0.1"
 tokio = { version = "1", features = ["full"] }
 tokio-util = { version = "0.6", features = ["io"] }
 bytes = "1"
+
+notify = "4"
 
 [dev-dependencies]
 
