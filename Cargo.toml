@@ -48,8 +48,15 @@ path = "src/iwatch_file.rs"
 name = "pyramid"
 path = "src/bin/pyramid.rs"
 
+[[bin]]
+name = "adv_6_22"
+path = "src/bin/adv_6_22.rs"
+
 [dependencies]
 ndarray = { version = "0.15" }
+
+anyhow = "1"
+itertools = "0.10"
 
 futures = "0.3"
 tracing = "0.1"
