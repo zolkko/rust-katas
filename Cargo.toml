@@ -52,8 +52,13 @@ path = "src/bin/pyramid.rs"
 name = "adv_6_22"
 path = "src/bin/adv_6_22.rs"
 
+[[bin]]
+name = "tokio_timeout"
+path = "src/bin/tokio_timeout.rs"
+
 [dependencies]
 ndarray = { version = "0.15" }
+pin-project-lite = "0.2"
 
 anyhow = "1"
 itertools = "0.10"

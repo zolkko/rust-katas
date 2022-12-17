@@ -544,6 +544,7 @@ dependencies = [
  "itertools",
  "ndarray",
  "notify",
+ "pin-project-lite",
  "tokio",
  "tokio-util",
  "tracing",
