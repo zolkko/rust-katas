@@ -8,6 +8,12 @@ edition = "2018"
 name ="rust_katas"
 path = "src/lib.rs"
 
+
+[[bin]]
+name = "hlist"
+path = "src/hlist_bin.rs"
+
+
 [[bin]]
 name = "two_sum"
 path = "src/two_sum.rs"
@@ -79,7 +85,9 @@ bytes = "1"
 
 notify = "5"
 
-mpi = { git = "https://github.com/rsmpi/rsmpi.git" }
+# mpi = { git = "https://github.com/rsmpi/rsmpi.git", features = ["derive"] }
+smallvec = "1"
+bit-vec = "0.6"
 
 [dev-dependencies]
 
